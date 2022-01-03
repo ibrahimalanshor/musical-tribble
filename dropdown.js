@@ -11,7 +11,7 @@
       })
 
       document.addEventListener('click', function (e) {
-        if (!dropdownMenu.contains(e.target) && e.target !== dropdownToggle) {
+        if (!dropdownMenu.contains(e.target) && !dropdownToggle.contains(e.target)) {
           dropdown.classList.remove('open')
         }
       })
