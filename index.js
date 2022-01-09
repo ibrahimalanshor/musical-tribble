@@ -41,6 +41,8 @@ module.exports = plugin(function ({ addComponents }) {
     },
     '.dropdown-item': {
       display: 'block',
+      width: '100%',
+      textAlign: 'left',
       padding: `${spacing['2']} ${spacing['3']}`,
     },
     '.dropdown-item:hover': {
@@ -73,6 +75,7 @@ module.exports = plugin(function ({ addComponents }) {
       left: '0',
       opacity: '0',
       maxHeight: '0',
+      overflow: 'hidden',
       transition
     },
     '.modal.open': {
@@ -110,10 +113,11 @@ module.exports = plugin(function ({ addComponents }) {
       alignItems: 'center',
       justifyContent: 'space-between'
     },
-    '.modal-close': {
+    '.modal-close-icon': {
       backgroundImage: `url("${svgToDataURI(`<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
       </svg>`)}")`,
+      display: 'block',
       width: spacing['4'],
       height: spacing['4'],
     },
